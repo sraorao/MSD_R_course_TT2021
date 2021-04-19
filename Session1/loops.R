@@ -8,7 +8,26 @@
 1 >= (2/2)
 "A" == "B"
 "TP53" == toupper("tp53")
+tolower("TP53")
 "A" %in% LETTERS
+
+4 %% 3
+
+x <- "c"
+x > 1000
+y <- "i"
+x > y
+z <- "A"
+x> z
+
+##Logical operators
+x <- c(TRUE, 4, 7, FALSE)
+y <- c(FALSE, TRUE, FALSE, TRUE)
+! x
+x & y
+x && y
+x | y
+x || y
 
 ###CONDITIONALS####
 ##IF conditional
