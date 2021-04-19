@@ -117,10 +117,3 @@ x > 4 | x > 6
 # Filtering with more than one criterion
 migmorph[which_rows_mig1 | which_rows_elongatedness1.5, ]
 
-#### Problem set ####
-# Q: Knockdown of which gene results in the highest migration?
-# # hint: this can be accomplished with the max() function
-
-# Q: Make a new data.frame that has only rows with 0.9 > migration > 0.4 AND elongatedness > 1.4
-# What is the correlation between migration and elongatedness in this new dataset?
-# Draw an XY plot showing the relationship between these two variables in this new dataset
