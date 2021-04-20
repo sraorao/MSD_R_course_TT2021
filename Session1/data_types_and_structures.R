@@ -61,7 +61,7 @@ as.numeric(num_participants) + as.numeric(num_instructors)
 # Q: What happens when you try to convert "two" to numeric type?
 as.numeric("two")
 # Q: What happens when you try to convert "Truth" to logical type?
-as.logical(9)
+as.logical("Truth")
 
 #### Data Structures####
 # Atomic vectors - most basic data type, can be of length => 0
@@ -126,7 +126,7 @@ all_genes_df$name
 all_genes_df$id
 # Q: Subset all_genes_df for only the 2nd and 3rd rows
 # hint: fill in the blanks as needed: all_genes[ , ]
-all_genes[c(2,3), ]
+all_genes_df[c(2,3), ]
 all_genes_df[2:3, ]
 
 # How to get information about objects in R
