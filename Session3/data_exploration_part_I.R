@@ -72,7 +72,7 @@ plot(x = owid_covid_uk$date, y = owid_covid_uk$total_cases_per_million, col = "r
 plot(x = owid_covid_uk$date, y = owid_covid_uk$total_cases_per_million, type = "l")
 
 # Q: Plot total deaths in the US across time
-plot(x = owid_covid_uk$date, y = owid_covid_uk$total_deaths, type = "l")
+plot(x = owid_covid_uk$date, y =                   , type = "l")
 
 
 # CREATE new columns based on existing data ####
@@ -91,10 +91,10 @@ plot(x = owid_covid_hdi_class$date, y = owid_covid_hdi_class$total_deaths_per_mi
 # Q: Filter the owid_covid dataset for only 4 countries: UK, US, Germany, Belgium
 four_countries = c("United Kingdom", "Belgium", "Germany", "United States")
 owid_covid %>%
-  filter(location %in% four_countries) %>% View()
+  filter(        %in%       ) %>% View()
 
 # Q: Plot test positivity rate in the UK across time, as a line graph
-plot(owid_covid_uk$date, owid_covid_uk$positive_rate, type = "l")
+plot(x =             , y =             , type = "l")
 
 # Q: Create a new column in the dataset where the value should be "low" or "high" 
 # depending on whether the population is lower or higher than the median population respectively
@@ -102,7 +102,7 @@ plot(owid_covid_uk$date, owid_covid_uk$positive_rate, type = "l")
 # We first need to calculate the median population; this can be done using base R or
 # using dplyr, either method is fine. We store this value in the variable median_population
 
-median_population = median(owid_covid$population, na.rm = TRUE) # Base R
+median_population = median(              , na.rm = TRUE) # Base R
 
 # or
 
@@ -112,16 +112,19 @@ owid_covid %>%                                                  # dplyr
 
 # Now we need to create a new column indicating whether the population for each
 # country is lower or higher than the median population, using mutate() and if_else()
+?if_else
 
 owid_covid %>%
-  mutate(pop_low_or_high = if_else(population < median_population, "low", "high")) -> owid_covid_pop_class
+  mutate(pop_low_or_high = if_else(           ,      ,      )) -> owid_covid_pop_class
   
 # Q: For data from Jan 1st 2021, plot the total cases (x) vs total deaths (y)
 # How can this graph be improved?
-new_year
+new_year = "2021-01-01"
 owid_covid %>%
-  filter(date == new_year) -> owid_covid_newyear
+  filter(date ==        ) -> owid_covid_newyear
 
-plot(x = owid_covid_newyear$total_cases, y = owid_covid_newyear$total_deaths)
-plot(x = log10(owid_covid_newyear$total_cases), 
-     y = log10(owid_covid_newyear$total_deaths), xlim = c(0, 4))
+plot(x =                    , y =                 )
+
+# plot the same data in log10 scale
+plot(x = log10(                               ), 
+     y = log10(                               ), xlim = c(0, 4))
