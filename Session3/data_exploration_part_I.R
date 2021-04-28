@@ -1,3 +1,6 @@
+###R for biologists
+##Irina & Rao, 28/04/2021
+
 # install.packages("tidyverse") # just need to do this once
 # install.packages("dplyr") # just need to do this once; also no need to do this 
 # if you ran the above line already (i.e. tidyverse is already installed)
