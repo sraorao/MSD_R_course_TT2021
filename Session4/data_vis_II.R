@@ -1,5 +1,5 @@
 ###R for biologists
-##Irina & Rao, 02/02/2021
+##Irina & Rao, 04/05/2021
 library(tidyverse)
 #Import the all sheets from Excel file provided (use readxl)
 library(readxl)
@@ -33,7 +33,7 @@ levels(cyto$Randomisation)<-c("ChAdOx1", "Control")
 #install.packages("data.table")
 library(data.table)
 #Wide to long format
-
+#library(reshape2)
 #cyto_melted<-melt(cyto,id.vars=c("ID","Randomisation"))
 #reshape(cyto,idvar = c("ID","Randomisation"),direction = "long")
 
