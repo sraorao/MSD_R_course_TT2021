@@ -1,5 +1,5 @@
 # PROBLEM SET ####
-# use the owid_covid_newyear dataset for these questions
+# use the owid_covid_newyear dataset for questions 1-3
 # Q1: Plot total_cases_per_million on x axis and total_deaths_per_million on y axis
 # Change the colour of the plots to 'darkgreen'
 
@@ -14,3 +14,8 @@
 # hint: use geom_label_repel() from ggrepel package
 # hint: use scale_size(range = c(2, 40))
 # hint: save the plot as a pdf with width and height = 10
+
+# Q4: For the covid data from India, plot date along the x axis and total number of 
+# COVID-19 vaccination doses administered on the y axis; # also plot new confirmed 
+# cases on the y axis in a different colour (look up the codebook https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-codebook.csv
+# for description of the columns)
